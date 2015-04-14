@@ -17,7 +17,7 @@ public class Venta {
 	public float getTotal(int valorBase)
 	{
 		float precioFinal;
-		precioFinal = (valorBase + prenda.getPrecio())*cantidad;
+		precioFinal = (valorBase + prenda.getPrecioBase())*cantidad*prenda.getCoeficienteMarca();
 		if(prenda.getImportado()) precioFinal *= 1.3;
 		return precioFinal;
 	}
