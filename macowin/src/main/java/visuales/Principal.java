@@ -54,7 +54,7 @@ public class Principal extends JFrame {
 	{
 		Prenda p = negocio.getlistaPrendas().get(lista.getSelectedIndex());
 		Venta v = new Venta(p,Mensaje.PedirNumero("Cantidad de prendas:"),new Date());
-		if(Mensaje.Confirmar("Por favor, confirmar operaci�n. \nPrenda:"+p.getDescripcion()+"\nCantidad:"+v.getCantidad()+"\nTOTAL:"+v.getTotal(negocio.getValorBase())))
+		if(Mensaje.Confirmar("Por favor, confirmar venta. \nPrenda:"+p.getDescripcion()+"\nCantidad:"+v.getCantidad()+"\nTOTAL: "+v.getTotal(negocio.getValorBase())))
 		{
 			negocio.nuevaVenta(v);
 		}
