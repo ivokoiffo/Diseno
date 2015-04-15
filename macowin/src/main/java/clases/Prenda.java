@@ -76,31 +76,9 @@ public class Prenda {
 	{
 		return marca.aumento(this.getPrecioBase());
 	}
-
-	//Getters y Setters
-	public int getId()
-	{
-		return id;
-	}
-	public void setId(int nuevoID)
-	{
-		id = nuevoID;
-	}
+	
 	public String getDescripcion()
 	{
 		return descripcion;
-	}
-	public void setDescripcion(String nuevaDescripcion)
-	{
-		descripcion = nuevaDescripcion;
-	}
-	
-	public boolean getImportado()
-	{
-		return importado;
-	}
-	public void setImportado(boolean i)
-	{
-		importado = i;
 	}
 }
