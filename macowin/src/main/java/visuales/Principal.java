@@ -45,9 +45,7 @@ public class Principal extends JFrame {
 	java.awt.List lista;
 	
 	private void cargarProductos(){
-		for (Prenda p : Prenda.getPrendasDePrueba()) {
-			lista.add(p.getDescripcion());
-		}
+		Prenda.getPrendasDePrueba().forEach(p->lista.add(p.getDescripcion()));
 	}
 	
 	private void registrarVenta()

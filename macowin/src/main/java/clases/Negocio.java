@@ -27,17 +27,14 @@ public class Negocio {
 	
 	public int getRecaudacion(Date fecha)
 	{
-		int recaudado = 0;
-		for (Venta v : listaVentas) {
-			if(mismaJornada(fecha, v.getFecha())) recaudado += v.getTotal(valorBase);
-		}
-		return recaudado;
+		return listaVentas.stream().filter(v -> mismaJornada(fecha, v.getFecha())).mapToInt(v->(int)v.getTotal(valorBase)).sum();
 	}
 	
 	public int getValorBase()
 	{
 		return valorBase;
 	}
+	
 	
 	private boolean mismaJornada(Date f1, Date f2)
 	{
